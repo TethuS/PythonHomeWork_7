@@ -53,8 +53,7 @@ fieldnames = ['car_dealer', 'car', 'car_model', 'engine_volume', 'gearbox', 'pri
 with open('cars.csv', 'w') as file:
     write_info = csv.DictWriter(file, delimiter='|', fieldnames=fieldnames)
     write_info.writeheader()
-    for i in range(len(car_dict)):
-        write_info.writerow(car_dict[i])
+    write_info.writerow(car_dict)
 
 #Задание 3. Создать json файл с данными о машине.
 with open('cars.json', 'w') as file:
